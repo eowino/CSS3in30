@@ -1,0 +1,43 @@
+/* the magic - https://mdn.io/text-shadow */
+
+:root {
+    --shadow-red: #d10e31;
+    --shadow-red-darker: #890920;
+}
+
+.shadow-typo,
+.threedee-typo {
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.shadow-typo {
+    position: relative;
+    display: inline-block;
+    color: #0099ff;
+
+    /* vertical offset, horizontal offset, blur, background */
+    /* #e7eef1 container background - intentional */
+    text-shadow: 3px 3px 0px #e7eef1,
+        8px 8px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* the text-shadow 15px adds the blur */
+.threedee-typo {
+    color: #f2395a;
+    -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
+            transform: skew(-5deg, -5deg) rotate(5deg);
+    -webkit-transform-origin: center center;
+             transform-origin: center center;
+    text-shadow: 1px 1px var(--shadow-red),
+                 2px 2px var(--shadow-red),
+                 3px 3px var(--shadow-red),
+                 4px 4px var(--shadow-red),
+                 5px 5px var(--shadow-red),
+                 6px 6px var(--shadow-red),
+                 7px 7px var(--shadow-red),
+                 8px 8px var(--shadow-red-darker),
+                 9px 9px var(--shadow-red-darker),
+                 10px 10px var(--shadow-red-darker),
+                 11px 11px 15px rgba(0, 0, 0, 0.5);
+}
